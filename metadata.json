@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Quick Language Translator Guide",
+  "description": "A comprehensive developer blueprint and functional simulator for building a beginner-friendly Android translation app using Gemini AI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
