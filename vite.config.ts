@@ -6,20 +6,19 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
   return {
-    base: '/Quick-Translator-App/',   // 🔴 REQUIRED FOR GITHUB PAGES
+    base: '/Quick-Translator-App/',
     plugins: [react()],
     server: {
       port: 3000,
-      host: true,
+      host: '0.0.0.0'
     },
     define: {
-      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
-    },
+        '@': path.resolve(__dirname, '.')
+      }
+    }
   };
 });
